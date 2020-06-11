@@ -22,10 +22,10 @@ if(isset($_GET['collection_status'])){
 
     $mensaje = "Tu pago ha sido aprobado.
       <br /><br />
-        payment_method_id: ".$payment_method_id."<br />
-       payment_type: ".$payment_type."<br />
-       paymet_id: ".$collection_id."<br />
-       external_reference: $ ".$externalref;
+        payment_method_id:$payment_method_id<br />
+       payment_type:$payment_type<br />
+       payment_id:$collection_id<br />
+       external_reference:$externalref";
 
   }
   if($_GET['collection_status'] == 'failure'){
