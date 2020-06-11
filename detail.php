@@ -4,8 +4,6 @@
 
 
     #Pegar os dados do MP em: https://www.mercadopago.com/mlb/account/credentials?type=basic e colocar abaixo
-    MercadoPago\SDK::setClientId(client_id);
-    MercadoPago\SDK::setClientSecret(client_secret);
     MercadoPago\SDK::setAccessToken(access_token);
     MercadoPago\SDK::setIntegratorId(integrator_id);
 
@@ -18,7 +16,7 @@
     $item->quantity = 1;
     $item->unit_price =$_POST['price'];
     $item->currency_id = "ARS";
-    $item->description = "​Dispositivo móvil de Tienda e-commerce";
+    $item->description = "Dispositivo móvil de Tienda e-commerce";
 
     $payer = new MercadoPago\Payer();
     $payer->name = "Lalo";
@@ -43,7 +41,7 @@
     );
 
    
-
+    $preference->payer = $payer;
     $preference->payment_methods = array(
       "excluded_payment_methods" => array(array("id" => "amex")),
       "excluded_payment_types" => array(array("id" => "atm")),
