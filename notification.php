@@ -1,7 +1,7 @@
 
 
 <?php 
-
+error_log("llego mp");
 $body=json_decode(file_get_contents('php://input'));
 
 switch($body->type) {
