@@ -17,14 +17,15 @@ if(isset($_GET['collection_status'])){
     $payment_method_id = $aDatos['payment_method_id'];
     $collection_id = $_GET['collection_id'];
     $payment_type = $_GET['payment_type'];
+    $externalref = $_GET['external_reference'];
     $total = $aDatos['transaction_details']['total_paid_amount'];
 
     $mensaje = "Tu pago ha sido aprobado.
       <br /><br />
-      1) payment_method_id: ".$payment_method_id."<br />
-      2) payment_type: ".$payment_type."<br />
-      3) collection_id: ".$collection_id."<br />
-      4) Total: $ ".$total;
+        payment_method_id: ".$payment_method_id."<br />
+       payment_type: ".$payment_type."<br />
+       paymet_id: ".$collection_id."<br />
+       external_reference: $ ".$externalref;
 
   }
   if($_GET['collection_status'] == 'failure'){
