@@ -13,13 +13,18 @@
     
     $item = new MercadoPago\Item();
     $item->id = "1234";
+    $item->picture_url='https://mercado-pago-ecommerce.herokuapp.com'.$_POST['img'];
     $item->title = $_POST['title']; 
     $item->quantity = 1;
     $item->unit_price =$_POST['price'];
+    $item->currency_id = "ARS";
+    $item->description = "​Dispositivo móvil de Tienda e-commerce";
+
     $payer = new MercadoPago\Payer();
     $payer->name = "Lalo";
     $payer->surname = "Landa";
     $payer->email = "test_user_63274575@testuser.com";
+    $payer->id = "471923173";
     $payer->phone = array(
       "area_code" => "11",
       "number" => "22223333"
@@ -28,7 +33,7 @@
 
     $payer->identification = array(
       "type" => "DNI",
-      "number" => "12345678"
+      "number" => "32659430"
     );
     
     $payer->address = array(
