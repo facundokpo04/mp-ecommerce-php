@@ -105,26 +105,6 @@ if(isset($_GET['collection_status'])){
             </div>
             <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
 
-                <style>
-                    .approved{
-                        padding: 30px;
-                        margin: 30px;
-                        background-color: #0d0;
-                        color: white;
-                    }
-                    .pending, .in_process{
-                        padding: 30px;
-                        margin: 30px;
-                        background-color: #c92;
-                        color: white;
-                    }
-                    .failure{
-                        padding: 30px;
-                        margin: 30px;
-                        background-color: #d00;
-                        color: white;
-                    }
-                </style>
                 <div class="<?=$_GET['collection_status'];?>"><?php echo $mensaje;?></div>
 
             </div>

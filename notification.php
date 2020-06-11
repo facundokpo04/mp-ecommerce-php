@@ -1,12 +1,11 @@
 
 
 <?php 
-error_log("llego mp");
 $body=json_decode(file_get_contents('php://input'));
-
 switch($body->type) {
     case "payment":
-        error_log("===========  TODO  ============== ".json_encode($body));
+        error_log("MercadoPago");
+        error_log("Json Response : ".json_encode($body));
         header('Content-Type: application/json');
         echo json_encode(['HTTP/1.1 200 OK'], 200);
         break;
