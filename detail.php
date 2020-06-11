@@ -57,7 +57,7 @@
 
     $preference->auto_return = "approved";
 
-    $preference->notification_url = notification_url;
+    $preference->notification_url = "https://facundokpo04-mp-commerce-php.herokuapp.com/notification.php";
     
     $preference->save(); 
 
