@@ -2,16 +2,11 @@
 
 <?php 
 
+$body=json_decode(file_get_contents('php://input'));
 
-
-$cartel = "facundokpo04";
-switch($_POST["type"]) {
+switch($body->type) {
     case "payment":
-        error_log("*******Post********".print_r($cartel,true));
-        error_log("===========  POST  ============== ".print_r($_POST, true));
-        error_log("===========  REQUEST  ============== ".print_r($_REQUEST, true));
-        $entityBody = file_get_contents('php://input');
-        error_log("===========  TODO  ============== ".print_r($entityBody, true));
+        error_log("===========  TODO  ============== ".json_encode($body));
         header('Content-Type: application/json');
         echo json_encode(['HTTP/1.1 200 OK'], 200);
         break;
