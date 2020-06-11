@@ -7,6 +7,7 @@
     MercadoPago\SDK::setClientId(client_id);
     MercadoPago\SDK::setClientSecret(client_secret);
     MercadoPago\SDK::setAccessToken(access_token);
+    MercadoPago\SDK::setIntegratorId(integrator_id);
 
     $preference = new MercadoPago\Preference();
     
