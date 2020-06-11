@@ -199,15 +199,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <?php
-                                    echo "<form action='/procesar-pago' method='POST'>";
-                                    echo "<script
-                                    src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js'
-                                    data-preference-id=".$preference->id.">
-                                    </script>";
-                                    echo "</form>";
-                                    ?>
-                                   
+                                    <a href="<?php echo $preference->init_point; ?>">Pagar la compra</a>
                                 </div>
                             </div>
                         </div>
